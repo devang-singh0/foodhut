@@ -1,0 +1,451 @@
+#hero {
+    background: linear-gradient(180deg, #f547471f, #f547471f, #ffffff00);
+    overflow: hidden !important;
+    main {
+        display: flex;
+
+        .content {
+            width: 40%;
+            padding: 70px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 200px;
+                width: 200px;
+                background-image: url('../../imgs/Orange.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+
+            .btn {
+                width: 145px;
+                height: 28px;
+                background: #f547474a;
+                border-radius: 20px;
+                display: flex;
+                padding: 5px;
+                gap: 6px;
+
+                p {
+                    font-style: 14px;
+                    color:  var(--txt);
+                }
+
+                svg {
+                    background-color: red;
+                    // height: 14px;
+                    fill: var(--secondary);
+                    // width: 14px;
+                    padding: 3px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            h2 {
+                font-size: 58px;
+                font-weight: 900;
+                width: 500px;
+                margin-top: 20px;
+                color: var(--txt);
+                span {
+                    color: var(--primary);
+                    &:nth-child(1){
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: -300%;
+                            left: 0;
+                            height: 200px;
+                            width: 200px;
+                            background-image: url('../../imgs/Vector3.png');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            transform: rotate(-30deg);
+                        }
+                    }
+                    &:nth-child(4) {
+                        color: var(--secondary);
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            width: 130%;
+                            height: 10px;
+                            background-image: url('../../imgs/decore.png');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+
+            &>p {
+                font-size: 24px;
+                color:  var(--txt);
+                margin-top: 30px;
+                width: 500px;
+            }
+
+            .search {
+                margin-top: 30px;
+                height: 54px;
+                width: 471px;
+                border: 1px solid;
+                border-color: var(--txt);
+                border-radius: 30px;
+                padding: 6px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                svg {
+                    height: 42px;
+                    min-width: 42px;
+
+                    &:nth-child(1) {
+                        padding: 9px;
+                    }
+
+                    &:nth-child(3) {
+                        padding: 12px;
+                        fill: white;
+                        background-color: var(--secondary);
+                        border-radius: 50%;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                }
+            }
+
+            .video {
+                display: flex;
+                gap: 30px;
+                margin-top: 30px;
+                align-items: center;
+
+                button {
+                    height: 45px;
+                    font-size: 18px;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    border: none;
+                    color: white;
+                    background-color: var(--primary);
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    p {
+                        color:  var(--txt);
+                    }
+
+                    svg {
+                        height: 52px;
+                        width: 52px;
+                        padding: 15px;
+                        fill: var(--primary);
+                        background-color: white;
+                        border-radius: 50%;
+                        box-shadow: 0px 15px 30px #f547474a;
+                    }
+                }
+            }
+        }
+
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 60%;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0%;
+                left: 20%;
+                height: 200px;
+                width: 200px;
+                background-image: url('../../imgs/Vector.png');
+                background-repeat: no-repeat;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 400px;
+                width: 400px;
+                z-index: -1;
+                background-image: url('../../imgs/burger.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: rotate(45deg);
+            }
+
+            img {
+                height: 40vw;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #hero {
+        main {
+            .content {
+                padding: 45px;
+
+                h2 {
+                    font-size: 42px;
+                }
+
+                &>p {
+                    font-size: 18px;
+                }
+
+                .search {
+                    width: 300px;
+                }
+
+                .video {
+                    min-width: 300px;
+                    gap: 20px;
+
+                    button {
+                        padding: 8px 15px;
+                    }
+
+                    div {
+                        gap: 10px;
+
+                        p {
+                            color:  var(--txt);
+                        }
+
+                        svg {
+                            height: 42px;
+                            width: 42px;
+                            padding: 15px;
+                            fill: var(--primary);
+                            background-color: white;
+                            border-radius: 50%;
+                            box-shadow: 0px 15px 30px #f547474a;
+                        }
+                    }
+                }
+            }
+
+            .img {
+                margin-top: 30px;
+
+                // &::after {
+                //     top: -10%;
+                //     left: 65%;
+                //     height: 200px;
+                //     width: 100%;
+                //     background-image: url('../../imgs/burger.png');
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                //     transform: rotate(45deg) translate(200px, 200px);
+                // }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    #hero {
+        main {
+            .content {
+                padding: 30px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                &>p {
+                    font-size: 16px;
+                }
+
+                .search {
+                    width: 250px;
+                    height: 35px;
+                    padding: 2.5px;
+
+                    svg {
+                        height: 30px;
+                        min-width: 30px;
+
+                        &:nth-child(1) {
+                            padding: 6px;
+                        }
+
+                        &:nth-child(3) {
+                            padding: 5px;
+                            fill: white;
+                            background-color: var(--secondary);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .video {
+                    min-width: 270px;
+                    gap: 10px;
+
+                    button {
+                        padding: 8px 15px;
+                        font-size: 14px;
+                    }
+
+                    div {
+                        gap: 5px;
+
+                        p {
+                            color:  var(--txt);
+                        }
+
+                        svg {
+                            height: 42px;
+                            width: 42px;
+                            padding: 15px;
+                            fill: var(--primary);
+                            background-color: white;
+                            border-radius: 50%;
+                            box-shadow: 0px 15px 30px #f547474a;
+                        }
+                    }
+                }
+            }
+
+            .img {
+                margin-top: 30px;
+
+                // &::after {
+                //     top: -10%;
+                //     left: 65%;
+                //     height: 200px;
+                //     width: 100%;
+                //     background-image: url('../../imgs/burger.png');
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                //     transform: rotate(45deg) translate(200px, 200px);
+                // }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #hero {
+
+        main {
+            flex-direction: column;
+
+            .content {
+                order: 3;
+                width: 100%;
+            }
+            .content {
+                padding: 45px;
+
+                h2 {
+                    font-size: 42px;
+                }
+
+                &>p {
+                    font-size: 18px;
+                }
+
+                .search {
+                    width: 300px;
+                }
+
+                .video {
+                    min-width: 300px;
+                    gap: 20px;
+
+                    button {
+                        padding: 8px 15px;
+                    }
+
+                    div {
+                        gap: 10px;
+
+                        p {
+                            color:  var(--txt);
+                        }
+
+                        svg {
+                            height: 42px;
+                            width: 42px;
+                            padding: 15px;
+                            fill: var(--primary);
+                            background-color: white;
+                            border-radius: 50%;
+                            box-shadow: 0px 15px 30px #f547474a;
+                        }
+                    }
+                }
+            }
+            .img {
+                order: 2;
+                width: 100%;
+                img {
+                    height: auto;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    #hero {
+        main {
+            flex-direction: column;
+
+            .content {
+                order: 3;
+                width: 100%;
+                h2{
+                    width: 100%;
+                }
+            }
+            .img {
+                order: 2;
+                width: 100%;
+                img {
+                    height: auto;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

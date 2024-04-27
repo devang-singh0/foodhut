@@ -1,0 +1,178 @@
+header {
+    padding: 32px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    #logo {
+        height: 78px;
+        width: 121px;
+        z-index: 3;
+        filter: var(--filter);
+    }
+
+    nav {
+        display: flex;
+        gap: 96px;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 50px;
+
+            li a {
+                color: var(--txt);
+                text-decoration: none;
+                font-size: 18px;
+                text-shadow: 0 4px 4px rgba(0, 0, 0, 0.309);
+            }
+        }
+
+        button {
+            height: 45px;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            background-color: var(--primary);
+        }
+    }
+
+    &>div {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        display: none;
+        z-index: 3;
+        margin-top: 10px;
+        &::before {
+            content: '';
+            height: 4px;
+            width: 40px;
+            border-radius: 5px;
+            background-color: var(--primary);
+            position: absolute;
+            top: 05px;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        &::after {
+            content: '';
+            height: 4px;
+            width: 25px;
+            border-radius: 5px;
+            background-color: var(--primary);
+            position: absolute;
+            top: 20px;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        &.active {
+
+            &::before,
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+                top: 50%;
+                left: 50%;
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+                width: 40px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+    header {
+        padding: 20px 45px;
+
+        #logo {
+            width: 80px;
+            height: auto;
+        }
+
+        nav {
+            gap: 50px;
+
+            ul {
+                gap: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    header {
+        padding: 20px 30px;
+
+        #logo {
+            width: 60px;
+            height: auto;
+        }
+
+        nav {
+            gap: 30px;
+
+            ul {
+                gap: 10px;
+
+                li a {
+                    font-size: 16px;
+                }
+            }
+
+            button {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    header {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            border: 1px solid red;
+            flex-direction: column;
+            background-color: var(--secondary);
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-100%);
+            transition: 0.5s cubic-bezier(0.18, 0.89, 0.68, 1.26);
+            ul{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                li a{
+                    text-align: center;
+                }
+            }
+            #logo {
+                width: 80px;
+                height: auto;
+            }
+            &.active{
+                transform: translateX(0);
+            }
+        }
+
+        &>div {
+            display: block;
+        }
+    }
+}
